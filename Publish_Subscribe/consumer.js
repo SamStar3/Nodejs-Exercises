@@ -5,7 +5,8 @@ connect();
 async function connect() {
 
     try {
-        const amqpServer = "amqp://localhost:5672"
+        const amqpServer = "amqps://eiygputn:bvh624pUVSvva3olYq1uBcDueRWsXmrA@lionfish.rmq.cloudamqp.com/eiygputn"
+        // const amqpServer = "amqp://localhost:5672"
         const connection = await amqp.connect(amqpServer)
         const channel = await connection.createChannel();
         await channel.assertQueue("jobs");
